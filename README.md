@@ -1,4 +1,4 @@
-# cellar
+# Cellar
 
 An ML-powered intelligence layer for your Obsidian vault.
 
