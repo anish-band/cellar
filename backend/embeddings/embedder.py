@@ -15,5 +15,3 @@ print(embeddings.shape)
 
 similarities = model.similarity(embeddings, embeddings)
 print(similarities)
-
-

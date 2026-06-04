@@ -39,6 +39,21 @@ def load_vault():
 
   return files_with_content
 
+"""Test to check similarities between files that are known to be unrelated"""
+# def file_check1():
+#   file_path = Path("/Users/anishbandapelli/Library/Mobile Documents/iCloud~md~obsidian/Documents/Anish's Brain/Computer Science/Data Structures.md")
+#   with open(file_path, "r", encoding="utf-8") as file:
+#     content = file.read()
+#     content = re.sub(r"\-\-\-(.*?)\-\-\-", "", content, flags=re.DOTALL)
 
+#   return content
+
+# def file_check2():
+#   file_path = Path("/Users/anishbandapelli/Library/Mobile Documents/iCloud~md~obsidian/Documents/Anish's Brain/Investing/Investing.md")
+#   with open(file_path, "r", encoding="utf-8") as file:
+#     content = file.read()
+#     content = re.sub(r"\-\-\-(.*?)\-\-\-", "", content, flags=re.DOTALL)
+
+#   return content
 
 
