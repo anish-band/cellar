@@ -28,4 +28,4 @@ similarities = model.similarity(embeddings, embeddings)
 print(similarities)
 
 
-
+print(umap_embeddings[:5])
