@@ -1,14 +1,14 @@
 from pathlib import Path
 import re
 
-def load_vault():
+def load_vault(vault_path):
   files_with_content = []
   file_count = 0
   wl_count = 0
   fm_count = 0
   empty_count = 0
 
-  file_path = Path("/Users/anishbandapelli/Library/Mobile Documents/iCloud~md~obsidian/Documents/Anish's Brain")
+  file_path = Path(vault_path)
 
 
   files = file_path.rglob("*.md")

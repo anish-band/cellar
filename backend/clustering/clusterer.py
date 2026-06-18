@@ -1,8 +1,12 @@
 import hdbscan
 import numpy as np
 import sys
+import json
 sys.path.append("/Users/anishbandapelli/Documents/Code/cellar")
-from backend.ingestion.vault_parser import load_vault
+
+with open("data/vault_cache/notes.json", "r") as f:
+  notes = json.load(f)
+
 
 
 umap_embeddings = np.load("data/vault_cache/umap_embeddings.npy")
