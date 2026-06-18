@@ -27,9 +27,12 @@ def generate_label(cluster_number):
   )
   return message.content[0].text
 
-cluster_names = []
+cluster_names = {}
 for cluster_number in clusters:
   label_name = generate_label(cluster_number)
-  cluster_names.append(label_name)
+  cluster_names[cluster_number] = label_name
 
+clean_cluster_names = {int(k): v for k, v in cluster_names.items()}
+with open("data/vault_cache/cluster_names.json", "w") as f:
+  json.dump(clean_cluster_names, f)
 print(cluster_names)
