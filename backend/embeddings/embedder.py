@@ -19,4 +19,6 @@ np.save("data/vault_cache/embeddings.npy", embeddings)
 print(embeddings.shape)
 
 similarities = model.similarity(embeddings, embeddings)
+np.save("data/vault_cache/similarities.npy", similarities)
+
 print(similarities)
