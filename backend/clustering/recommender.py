@@ -6,7 +6,6 @@ sys.path.append("/Users/anishbandapelli/Documents/Code/cellar")
 with open("data/vault_cache/notes.json", "r") as f:
   notes = json.load(f)
 
-notes = load_vault()
 embeddings = np.load("data/vault_cache/embeddings.npy")
 similarities = np.load("data/vault_cache/similarities.npy")
 

@@ -16,7 +16,10 @@ clusterer = hdbscan.HDBSCAN(algorithm='best', alpha=1.0, approx_min_span_tree=Tr
                             min_samples=2, p=None)
 
 clusterer.fit(umap_embeddings)
+
 labels = clusterer.labels_
+np.save("data/vault_cache/cluster_labels.npy", labels)
+
 unique_labels, counts = np.unique(labels, return_counts=True)
 
 total = 0
@@ -29,7 +32,7 @@ for label, count in zip(unique_labels, counts):
     print(f"Cluster {label}: {count} items")
     #total += count
 
-notes = load_vault()
+
 
 cluster_6_notes = []
 for i, label in enumerate(labels):
