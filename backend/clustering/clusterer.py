@@ -9,7 +9,7 @@ umap_embeddings = np.load("data/vault_cache/umap_embeddings.npy")
 
 clusterer = hdbscan.HDBSCAN(algorithm='best', alpha=1.0, approx_min_span_tree=True,
                             gen_min_span_tree=False, leaf_size=40, metric='euclidean', min_cluster_size=3,
-                            min_samples=None, p=None)
+                            min_samples=2, p=None)
 
 clusterer.fit(umap_embeddings)
 labels = clusterer.labels_
@@ -27,19 +27,19 @@ for label, count in zip(unique_labels, counts):
 
 notes = load_vault()
 
-cluster_3_notes = []
+cluster_6_notes = []
 for i, label in enumerate(labels):
-  if label == 3:
-    cluster_3_notes.append(notes[i]["title"])
+  if label == 6:
+    cluster_6_notes.append(notes[i]["title"])
 
-print(cluster_3_notes)
+print(cluster_6_notes)
 
-cluster_2_notes = []
+cluster_12_notes = []
 for i, label in enumerate(labels):
-  if label == 2:
-    cluster_2_notes.append(notes[i]["title"])
+  if label == 12:
+    cluster_12_notes.append(notes[i]["title"])
 
-print(cluster_2_notes)
+print(cluster_12_notes)
 
 #print(set(clusterer.labels_))
 #print(f"Total Notes: {total}") 
